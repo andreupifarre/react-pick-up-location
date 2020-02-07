@@ -1,7 +1,6 @@
 import React from 'react';
+import SearchField from '../SearchField/SearchField';
 import './SearchBox.scss';
-
-const SearchField = () => <></>;
 
 const SearchBox = () => (
   <div className="c-search-box">

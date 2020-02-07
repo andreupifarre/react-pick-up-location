@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchField should render correctly 1`] = `
+Array [
+  <div
+    className="c-search-field"
+  >
+    <label
+      className="c-search-field__label"
+      htmlFor="c-search-input"
+    >
+      Pick-up Location
+    </label>
+    <input
+      aria-autocomplete="list"
+      aria-haspopup="true"
+      aria-required="true"
+      autoComplete="off"
+      className="c-search-field__input"
+      id="c-search-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="city, airport, station, region, district…"
+      type="text"
+    />
+  </div>,
+]
+`;
