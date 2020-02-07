@@ -1,7 +1,6 @@
 import React from 'react';
+import SearchBox from '../SearchBox/SearchBox';
 import './App.scss';
-
-const SearchBox = () => <></>;
 
 const App = () => (
   <div className="app">
