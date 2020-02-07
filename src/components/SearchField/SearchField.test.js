@@ -2,8 +2,20 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import SearchField from './SearchField';
+import useDebounce from '../../hooks/useDebounce';
+import useFetchData from '../../hooks/useFetchData';
+
+jest.mock('../../hooks/useDebounce');
+jest.mock('../../hooks/useFetchData');
+
+useDebounce.mockReturnValue('');
+useFetchData.mockReturnValue([[], false]);
 
 const render = () => shallow(<SearchField />);
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
 
 describe('SearchField', () => {
   it('should contain a parent element with a class .c-search-field', () => {
@@ -45,6 +57,17 @@ describe('SearchField', () => {
     const element = wrapper.find('SearchList');
     expect(element.exists()).toBeTruthy();
     expect(element.prop('locations')).toBeDefined();
+  });
+
+  it('should pass the correct object to SearchList location property on input focus', () => {
+    const wrapper = render();
+    const locations = [
+      { index: 1, name: 'foo', iata: 'BCN' },
+      { index: 2, name: 'bar', iata: 'MAD' },
+    ];
+    useFetchData.mockReturnValue([locations, false]);
+    wrapper.find('input').simulate('focus');
+    expect(wrapper.find('SearchList').prop('locations')).toEqual(locations);
   });
 
   it('should render correctly', () => {
