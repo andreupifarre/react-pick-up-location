@@ -1,0 +1,53 @@
+@font-face {
+  font-display: swap;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+    url(/fonts/ubuntu-v13-latin-500.woff2) format('woff2'),
+    url(/fonts/ubuntu-v13-latin-500.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(/fonts/open-sans-v15-latin-400.woff2) format('woff2'),
+    url(/fonts/open-sans-v15-latin-400.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+    url(/fonts/open-sans-v15-latin-600.woff2) format('woff2'),
+    url(/fonts/open-sans-v15-latin-600.woff) format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
