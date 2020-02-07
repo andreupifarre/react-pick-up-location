@@ -27,7 +27,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn cypress:open`
+### `yarn test:e2e`
 
 e2e testing is implemented with cypress, running that command will open the test runner.
 
