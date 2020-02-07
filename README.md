@@ -26,3 +26,11 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn cypress:open`
+
+e2e testing is implemented with cypress, running that command will open the test runner.
+
+## Other Considerations
+
+- IE10 works only on a production built environment, running `yarn build`, due to some bugs with the pollifil library.
