@@ -70,6 +70,34 @@ describe('SearchField', () => {
     expect(wrapper.find('SearchList').prop('locations')).toEqual(locations);
   });
 
+  it('should not display search results list if 1 alphanumeric character has been entered', () => {
+    const wrapper = render();
+    const input = wrapper.find('input');
+
+    useDebounce.mockReturnValue('');
+    useFetchData.mockReturnValue([[], false]);
+
+    input.simulate('focus');
+    input.simulate('change', { target: { value: 'B' } });
+
+    const element = wrapper.find('SearchList').dive();
+    expect(element.find('.c-search-list__item').length).toEqual(0);
+  });
+
+  it('should display search results list if 2 single alphanumeric character have been entered', () => {
+    const wrapper = render();
+    const input = wrapper.find('input');
+
+    useDebounce.mockReturnValue('Ba');
+    useFetchData.mockReturnValue([[{ index: 1 }, { index: 2 }], false]);
+
+    input.simulate('focus');
+    input.simulate('change', { target: { value: 'Ba' } });
+
+    const element = wrapper.find('SearchList').dive();
+    expect(element.find('.c-search-list__item').length).toEqual(2);
+  });
+
   it('should render correctly', () => {
     expect(render().getElements()).toMatchSnapshot();
   });

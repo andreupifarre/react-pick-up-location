@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchList should render correctly 1`] = `
+Array [
+  <div
+    className="c-search-list"
+  >
+    <ol
+      className="c-search-list__list"
+      role="listbox"
+    />
+  </div>,
+]
+`;

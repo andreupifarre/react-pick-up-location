@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import useDebounce from '../../hooks/useDebounce';
 import useFetchData from '../../hooks/useFetchData';
+import SearchList from '../SearchList/SearchList';
 import './SearchField.scss';
-
-const SearchList = props => <></>;
 
 const SearchField = () => {
   const [searchText, setSearchText] = useState('');
